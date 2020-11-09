@@ -4,6 +4,7 @@ body {
     font-size: 18px;
     color: #2A4A5C;
     margin: 0;
+    background-color: #EFF6FF;
 }
 div,
 p,
@@ -20,9 +21,8 @@ h1, h2, p {
     margin: 0 ;
 }
 .wrapper {
-    height: 100vh;
-    background-color: #EFF6FF;
 
+    padding: 50px 20px;
 }
 .flex {
     display: flex;
@@ -70,13 +70,15 @@ h1, h2, p {
 }
 .link {
     text-decoration: none;
+    flex-basis: 45%;
 }
 .btn {
-    width: 225px;
+    width: 100%;
     height: 40px;
     color: #ffffff;
     font-size: 14px;
-    padding: 0 10px;
+    padding: 0 5px;
+    justify-content: space-around;
 }
 .btn:hover {
     border: 2px solid #85c5ef;
@@ -93,11 +95,11 @@ h1, h2, p {
 .soc-logo {
     display: inline;
     background-size: cover;
-    margin-right: 15px;
-    margin-top: 10px;
+    margin-right: 10px;
+    margin-top: 8px;
 }
 .soc__text {
-    margin-right: 20px;
+    margin-right: 10px;
     line-height: 40px;
 }
 .linkedin {
@@ -127,9 +129,12 @@ h1, h2, p {
 } 
 .user-contact {
     padding: 35px 0;
-} 
+}
+.user-contact__item{
+    flex-basis: 45%;
+}
 .input-box {
-    width: 225px;
+    width: 100%;
     height: 50px;
     border: 1px solid  #e5e5e5;
     outline:none;
@@ -196,16 +201,10 @@ h1, h2, p {
 .invest__info {
     width: 11px;
     height: 11px;
-    border-radius: 50%;
-    border: 1px solid #c6c6c6;
-    font-size: 10px;
-    font-weight: 500;
-    color: #c6c6c6;
-    text-align: center;
-    vertical-align: middle;
-    margin-left: 5px;
-    line-height: 8px;
-    margin-top: 7px;
+    background-image: url(../img/icon-info.png);
+    background-size: 100% 100%;
+    opacity: 0.5;
+    margin: 7px 5px;
 }
 .individual__block {
 
@@ -227,7 +226,7 @@ h1, h2, p {
     padding: 35px 0;
     position: relative;
 }
-.consent__radio+.agree::before{
+.checkbox+.agree::before{
     content: '';
     display: inline-block;
     width: 12px;
@@ -238,10 +237,20 @@ h1, h2, p {
     top: 36px;
     left: 5px;
 }
-.consent__radio:not(:disabled):not(:checked)+label:hover::before {
+.checkbox:not(:disabled):not(:checked)+label:hover::before {
     border-color: #3698FB;
 }
+.checkbox:checked+label::before {
+    border: 1px solid  #3698FB;;
+    content: "\2713";
+    color: #3698FB;
+    line-height: 10px;
+    font-size: 11px;
+    text-align: center;
+    font-weight: 700;  
+}
 .submit {
+    width: 45%;
     background-color: #3698FB;
     border: none;
     border-radius: 5px;
@@ -252,4 +261,100 @@ h1, h2, p {
     color: #3698FB;
     border:1px solid #3698FB;
     outline: none;
+}
+@media(max-width: 1173px) {
+    .content {
+        height: auto;
+        padding: 65px 20px;
+    }
+}
+@media(max-width: 995px) {
+    .wrapper {
+        padding: 10px 10px;
+    }
+    .content {
+    padding: 20px;
+    }
+    .reg-title {
+        font-size: 28px;
+        padding-top: 0;
+    }
+    .reg-subtitle {
+        font-size: 15px;
+    }
+    .reg-social, .user-contact, .invest {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .btn {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .fb {
+        margin-bottom: 10px;
+    }
+    .user-contact__item {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .user-contact__item:last-child {
+        margin-top: 10px;
+    }
+    .invest-title {
+        font-size: 22px;
+    }
+    .invest {
+        width: 123px;
+        padding: 20px 0;
+        margin: 0 auto;
+    }
+    .invest__items {
+        margin-bottom: 10px;
+        justify-content: flex-start;
+    }
+    .individual__block{
+        margin: 0 auto;
+    }
+    .consent {
+        padding: 25px;
+        font-size: 10px;
+    }
+    .checkbox+.agree::before {
+        top: 24px;
+        left: 35px;
+    }
+    .submit-btn {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .submit {
+        width: 100%;
+    }
+}
+@media (max-width: 885px) {
+    .container {
+        flex-direction: column;
+    }
+    .main-img {
+        display: none;
+    }.content {
+        width: 100%;
+        text-align: center;
+    }
+    .individual__block {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .invest{
+        width: ;
+    }
+    .consent {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 615px) {
+    .consent {
+        width: 80%;
+    }
 }

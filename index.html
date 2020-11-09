@@ -11,7 +11,7 @@
     <div class="wrapper flex">
         <div class="container flex">
             <div class="main-img col">
-                <header>
+                <header class=header>
                     <a href="#">
                         <div class="logo"></div>
                     </a>
@@ -46,11 +46,11 @@
                     <div class="separator__line"></div>
                 </div>
                 <div class="user-contact flex">
-                    <div class="user-contact__email">
+                    <div class="user-contact__item">
                         <label for="email" class="input-name">Email</label>
-                        <input type="text" id="email" class="input-box" placeholder="gus.goodwin@gmail.com">
+                        <input type="text" id="email" class="input-box">
                     </div>
-                    <div class="user-contact__phone">
+                    <div class="user-contact__item">
                         <label for="phone" class="input-name">Phone</label>
                         <input type="text" id="phone" class="input-box">
                     </div>
@@ -61,22 +61,22 @@
                     <div class="flex invest__items">
                         <input class="custom-radio"type="radio" name="type" id="individual">
                         <label class="check-name" for="individual" >Individual</label>
-                        <div class="invest__info">i</div>
+                        <div class="invest__info"></div>
                     </div>
                     <div class="flex invest__items">
                         <input class="custom-radio" type="radio" name="type" id="business">
                         <label class="check-name" for="business">Business</label>
-                        <div class="invest__info">i</div>
+                        <div class="invest__info"></div>
                     </div>
                     <div class="flex invest__items">
                         <input class="custom-radio" type="radio" name="type" id="ira">
                         <label class="check-name" for="ira">IRA</label>
-                        <div class="invest__info">i</div>
+                        <div class="invest__info"></div>
                     </div>
                     <div class="flex invest__items">    
                         <input class="custom-radio" type="radio" name="type" id="trust">
                         <label class="check-name" for="trust">Trust</label>
-                        <div class="invest__info">i</div>
+                        <div class="invest__info"></div>
                     </div>
                 </div>
                 <div class="individual__block">
@@ -85,13 +85,13 @@
                     </p>
                 </div>
                 <div class="consent">
-                    <input class="custom-radio consent__radio" type="radio" id="agree">
+                    <input class="custom-radio checkbox" type="checkbox" id="agree">
                     <label class="agree" for="agree">
                         I agree to the terms and receiving notifications from iintoo
-                        <a href="">View full terms</a>
                     </label>
+                    <a class="link-terms"href="">View full terms</a>
                 </div>
-                <div class="block-btn">
+                <div class="submit-btn">
                     <button class="submit btn">Create Account</button>
                 </div>
             </div>
